@@ -1,0 +1,182 @@
+:root {
+    --primary-color: #39c0c0;
+    --secondary-color: #006666;
+    --highlight-color: #d76d29;
+    --bg-even: #f5f5f5;
+    --bg-odd: #e0e0e0;
+    --bg-calendar-day: #ededed;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+
+    font-family: var(--font-family);
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.dashboard {
+    background-color: #ffffff;
+    width: 200px;
+    min-height: 100vh;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.dashboard-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    padding: 12px 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.dashboard ul li:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+table {
+    margin: 20px 40px;
+    border-collapse: collapse;
+    width: auto;
+    font-size: 0.9rem;
+}
+
+.weekly-program {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: default;
+}
+
+.weekly-program th,
+.weekly-program td {
+    padding: 8px 12px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.program-head {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.odd {
+    background-color: var(--bg-odd);
+}
+
+.even {
+    background-color: var(--bg-even);
+}
+
+.weekly-program td.session {
+    cursor: pointer;
+}
+
+.weekly-program td.session:hover {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.calendar {
+    border-collapse: separate;
+    border-spacing: 5px;
+    width: fit-content;
+    margin: 20px 40px;
+}
+
+.calander-caption {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calander-head,
+.Fr {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.calander-head {
+    color: var(--secondary-color);
+}
+
+.Fr {
+    color: var(--highlight-color);
+}
+
+.month-days,
+.Ho {
+    background-color: var(--bg-calendar-day);
+    border-radius: 5px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.2s ease;
+}
+
+.Ho {
+    background-color: #fff2e6;
+    color: var(--highlight-color);
+}
+
+.month-days:hover,
+.Ho:hover {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+    .dashboard {
+        width: 180px;
+        padding: 15px;
+    }
+
+    table {
+        margin: 15px 20px;
+    }
+
+    .monthly-calendar td,
+    .monthly-calendar th {
+        width: 40px;
+        height: 40px;
+    }
+}

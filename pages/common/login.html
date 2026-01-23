@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../../assets/css/common/login.css">
+    <link rel="stylesheet" href="../../assets/css/common/mainLayout.css">
+</head>
+
+<body>
+    <header>
+        <img src="../../assets/images/logos/sut-logo.png" alt="دانشگاه صنعتی شاهرود">
+    </header>
+    <div class="master-page">
+        <div class="title-line">
+            <p>ورود به ناحیه کاربری</p>
+        </div>
+        <form class="login-form">
+            <div class="user-mode">
+                <button type="button" id="professor-mode" class="active">اساتید</button>
+                <button type="button" id="student-mode">دانشجویان</button>
+            </div>
+            <div class="inputs">
+                <label for="userID">نام کاربری</label>
+                <input id="userID" type="text" name="user-id" required>
+                <label for="userPassword">کلمه عبور</label>
+                <input id="userPassword" type="password" name="user-password" required>
+                <input id="login-button" type="submit" value="ورود">
+            </div>
+        </form>
+        <div class="hyperlinks">
+            <a>فراموشی کلمه عبور</a>
+            <a>فعالسازی حساب کاربری</a>
+            <a id="register">عضویت در سامانه</a>
+        </div>
+    </div>
+    <footer>
+        <p>ساخته شده با ♡</p>
+        <a href="https://github.com/zibaakord">گیت‌هاب</a>
+    </footer>
+    <script>
+        const professorBtn = document.getElementById('professor-mode');
+        const studentBtn = document.getElementById('student-mode');
+
+        professorBtn.addEventListener('click', () => {
+            professorBtn.classList.add('active');
+            studentBtn.classList.remove('active');
+        });
+
+        studentBtn.addEventListener('click', () => {
+            studentBtn.classList.add('active');
+            professorBtn.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

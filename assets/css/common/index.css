@@ -1,0 +1,174 @@
+:root {
+    --login-button-bg: #495274;
+    --login-button-hover: #c5630e;
+    --primary-color: #39c0c0;
+    --text-white: #ffffff;
+    --text-muted: #bbbbbb;
+    --background-opacity: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Shabnam', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+    color: var(--text-white);
+}
+
+.image-container {
+    background: url("../../images/backgrounds/by-night.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-opacity);
+    z-index: 1;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-lbl-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#logo-svg {
+    width: 100px;
+    height: 100px;
+}
+
+.lbl {
+    display: flex;
+    flex-direction: column;
+}
+
+#lbl-1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#lbl-3 {
+    font-size: 22px;
+    color: #ff5555;
+    text-shadow: 0px 0px 3px #000;
+}
+
+#lbl-2 {
+    font-size: 16px;
+    color: #dddddd;
+}
+
+.login-button {
+    background-color: var(--login-button-bg);
+    border: none;
+    color: var(--text-white);
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    z-index: 2;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.login-button:hover {
+    background-color: var(--login-button-hover);
+}
+
+.item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.lblTitle_1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.lblTitle_1 span {
+    color: var(--primary-color);
+}
+
+.lblTitle_2 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+.lblTitle_2 span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80px;
+    background-color: #1a1a1a;
+    color: var(--text-muted);
+}
+
+footer p,
+footer a {
+    margin: 5px 0;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .home-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-lbl-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item {
+        margin-bottom: 40px;
+    }
+
+    .lblTitle_1 {
+        font-size: 1.6rem;
+    }
+
+    .lblTitle_2 {
+        font-size: 1rem;
+    }
+}
