@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../assets/css/common/mainLayout.css">
 </head>
 
-<body>
+<body style="flex-direction: row;">
     <header>
         <div class="logo-container">
             <img id="logo-svg" src="../../assets/images/logos/sut-logo.png">
@@ -36,7 +36,8 @@
                 </div>
             </div>
             <div class="content" style="flex-direction: row;">
-                <table class="weekly-program">
+                <div id="time">
+                    <table class="weekly-program">
                     <tbody>
                         <tr class="program-head">
                             <td class="program-head">برنامه هفتگی</td>
@@ -166,6 +167,14 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
+                <div class="courses">
+                    <div class="course">
+                        <span class="course-name"></span>
+                        <span class="course-group"></span>
+                        <span class="course-faculty"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
