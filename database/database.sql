@@ -254,7 +254,9 @@ CREATE TABLE public.professors (
     id integer NOT NULL,
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
-    email character varying(100)
+    email character varying(100),
+    password character varying(255) NOT NULL,
+    photo_url text
 );
 
 
@@ -296,7 +298,9 @@ CREATE TABLE public.students (
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
     major character varying(100),
-    status character varying(20) DEFAULT 'active'::character varying
+    status character varying(20) DEFAULT 'active'::character varying,
+    password character varying(255) NOT NULL,
+    photo_url text
 );
 
 
@@ -439,7 +443,7 @@ COPY public.enrollments (id, student_id, course_group_id) FROM stdin;
 -- Data for Name: professors; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.professors (id, first_name, last_name, email) FROM stdin;
+COPY public.professors (id, first_name, last_name, email, password, photo_url) FROM stdin;
 \.
 
 
@@ -449,7 +453,7 @@ COPY public.professors (id, first_name, last_name, email) FROM stdin;
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.students (id, student_number, first_name, last_name, major, status) FROM stdin;
+COPY public.students (id, student_number, first_name, last_name, major, status, password, photo_url) FROM stdin;
 \.
 
 
@@ -703,4 +707,3 @@ ALTER TABLE ONLY public.enrollments
 --
 
 \unrestrict ERgB0MnGMpgiebfLZxO1IAnxxBAmZCnLJeCiO4asofvBI5niavXgWrjX9GXa8zI
-

@@ -1,0 +1,335 @@
+﻿:root {
+    --primary-color: #39c0c0;
+    --secondary-color: #006666;
+    --highlight-color: #d76d29;
+    --bg-even: #f5f5f5;
+    --bg-odd: #e0e0e0;
+    --bg-card: #ffffff;
+    --line-color: #d8d8d8;
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: #1f2937;
+}
+
+.layout-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 16px;
+    padding: 16px;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.dashboard {
+    background-color: var(--bg-card);
+    width: 220px;
+    border: 1px solid var(--line-color);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    flex: 0 0 220px;
+    border-radius: 0;
+}
+
+.dashboard-header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    margin: 0 0 14px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 0;
+    font-size: 1rem;
+}
+
+.dashboard ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard li {
+    padding: 10px;
+    border-radius: 0;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dashboard li:hover,
+.dashboard li.active {
+    background: #499b9b;
+    color: #fff;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+}
+
+.master-page {
+    margin-top: -10px;
+}
+.menu-toggle {
+    display: none;
+    border: none;
+    background: var(--secondary-color);
+    color: #fff;
+    border-radius: 0;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.student-content {
+    align-items: stretch;
+    padding: 12px;
+    border-radius: 0;
+    border: 1px solid var(--line-color);
+    background: #fff;
+    gap: 14px;
+    animation: panel-in 0.45s ease both;
+}
+
+@keyframes panel-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.summary-card {
+    border: 1px solid var(--line-color);
+    border-radius: 0;
+    padding: 10px;
+    background: #fafafa;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.summary-card p {
+    margin: 8px 0 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.report-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.report-card {
+    border: 1px solid var(--line-color);
+    border-radius: 0;
+    padding: 10px;
+    background: #fff;
+}
+
+.report-card h4 {
+    margin: 0 0 8px;
+}
+
+.status-bars {
+    display: grid;
+    gap: 8px;
+}
+
+.status-row {
+    display: grid;
+    grid-template-columns: 110px 1fr 36px;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+}
+
+.status-track {
+    height: 10px;
+    background: #e9e9e9;
+}
+
+.status-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.stats-table th,
+.stats-table td {
+    border: 1px solid #dfdfdf;
+    padding: 8px;
+    text-align: right;
+}
+
+.stats-table thead th {
+    background: #f1f7f7;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--line-color);
+    border-radius: 0;
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.courses-table th,
+.courses-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--line-color);
+    text-align: right;
+    vertical-align: middle;
+}
+
+.courses-table th {
+    background: #f1f7f7;
+    color: #0b3f3f;
+    font-size: 0.9rem;
+}
+
+.progress {
+    width: 120px;
+    height: 8px;
+    border-radius: 0;
+    background: #ddeaea;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #15a394, #0d5d56);
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status.good {
+    color: #17803d;
+    background: #e7f6ec;
+}
+
+.status.caution {
+    color: #b7791f;
+    background: #fff4dd;
+}
+
+.status.risk {
+    color: #b83232;
+    background: #fce9e9;
+}
+
+@media (max-width: 1024px) {
+    .layout-container {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .dashboard {
+        width: 100%;
+        flex-basis: 100%;
+        display: none;
+    }
+
+    .dashboard.open {
+        display: block;
+    }
+
+    .summary-grid,
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses-table {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .courses-table thead {
+        display: none;
+    }
+
+    .courses-table,
+    .courses-table tbody,
+    .courses-table tr,
+    .courses-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .courses-table tr {
+        border-bottom: 1px solid var(--line-color);
+        padding: 10px;
+    }
+
+    .courses-table td {
+        border: none;
+        padding: 7px 0;
+    }
+
+    .courses-table td::before {
+        content: attr(data-label) ": ";
+        font-weight: 600;
+        color: #4b5563;
+    }
+
+    .progress {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .status-row {
+        grid-template-columns: 90px 1fr 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .layout-container {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .student-content {
+        padding: 8px;
+    }
+
+    .summary-card p {
+        font-size: 1.05rem;
+    }
+}

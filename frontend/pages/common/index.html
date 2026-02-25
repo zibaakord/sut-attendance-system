@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>خانه</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="http://localhost:3000/api/assets/favicon">
     <link rel="stylesheet" href="../../assets/css/common/index.css">
+    <link rel="stylesheet" href="../../assets/css/common/responsive-animations.css">
 </head>
 
 <body>
     <div class="image-container">
         <header class="home-header">
             <div class="logo-lbl-container">
-                <img id="logo-svg" src="../../assets/images/logos/sut-logo.png" alt="دانشگاه صنعتی شاهرود">
+                <img id="logo-svg" src="http://localhost:3000/api/assets/logo" alt="دانشگاه صنعتی شاهرود">
                 <div class="lbl">
                     <div id="lbl-1">
                         سیستم <span id="lbl-3">حضور و غیاب</span>
@@ -20,7 +22,13 @@
                     <div id="lbl-2">دانشگاه صنعتی شاهرود</div>
                 </div>
             </div>
-            <button class="login-button">ورود</button>
+            <button class="login-button" aria-label="ورود به سامانه">
+                <svg class="login-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M20 21C20 17.6863 16.4183 15 12 15C7.58172 15 4 17.6863 4 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+                <span>ورود</span>
+            </button>
         </header>
         <div class="item">
             <div class="lblTitle_1">
@@ -29,7 +37,7 @@
             </div>
             <div class="lblTitle_2">
                 با استفاده از این سامانه تمامی فرآیندهای مرتبط با
-                <span>حضور وغیاب دانشجویان</span>
+                <span>حضور و غیاب دانشجویان</span>
                 را به صورت یکپارچه مدیریت نمایید
             </div>
         </div>
@@ -38,6 +46,18 @@
         <p>ساخته شده با ♡</p>
         <a href="https://github.com/zibaakord">گیت‌هاب</a>
     </footer>
+    <script>
+        const loginButton = document.querySelector('.login-button');
+        if (loginButton) {
+            loginButton.addEventListener('click', () => {
+                window.location.href = './login.html';
+            });
+        }
+    </script>
+
 </body>
 
 </html>
+
+
+

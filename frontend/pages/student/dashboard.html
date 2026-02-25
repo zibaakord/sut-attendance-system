@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد دانشجو</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="http://localhost:3000/api/assets/favicon">
+    <link rel="stylesheet" href="../../assets/css/student/dashboard.css">
+    <link rel="stylesheet" href="../../assets/css/common/mainLayout.css">
+    <link rel="stylesheet" href="../../assets/css/common/responsive-animations.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo-svg" src="http://localhost:3000/api/assets/logo" alt="لوگوی دانشگاه">
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <aside class="dashboard" id="sidebar">
+            <h2 class="dashboard-header">داشبورد دانشجو</h2>
+            <ul>
+                <li class="active">دروس من</li>
+                <li>حضور و غیاب</li>
+                <li>گزارش آماری</li>
+                <li>پروفایل</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <section class="master-page">
+                <div class="title-line">
+                    <button id="menu-toggle" class="menu-toggle" aria-label="باز کردن منو">منو</button>
+                    <p>دروس ترم و گزارش حضور</p>
+                </div>
+            </section>
+
+            <section class="content student-content">
+                <div class="summary-grid">
+                    <article class="summary-card">
+                        <h3>تعداد کل دروس</h3>
+                        <p id="total-courses">0</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>میانگین حضور</h3>
+                        <p id="avg-attendance">0%</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>دروس با حضور پایین</h3>
+                        <p id="low-attendance">0</p>
+                    </article>
+                </div>
+
+                <div class="report-grid">
+                    <article class="report-card">
+                        <h4>توزیع وضعیت دروس</h4>
+                        <div id="status-bars" class="status-bars"></div>
+                    </article>
+
+                    <article class="report-card">
+                        <h4>گزارش تحلیلی دروس</h4>
+                        <table class="stats-table" id="student-stats-table">
+                            <thead>
+                                <tr>
+                                    <th>درس</th>
+                                    <th>درصد حضور</th>
+                                    <th>وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody id="student-stats-body">
+                                <tr><td colspan="3">در حال بارگذاری...</td></tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="courses-table" id="courses-table">
+                        <thead>
+                            <tr>
+                                <th>درس</th>
+                                <th>استاد</th>
+                                <th>جلسات برگزارشده</th>
+                                <th>جلسات حاضر</th>
+                                <th>درصد حضور</th>
+                                <th>وضعیت</th>
+                            </tr>
+                        </thead>
+                        <tbody id="courses-body"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>ساخته شده با ♡</p>
+        <a href="https://github.com/zibaakord">گیت‌هاب</a>
+    </footer>
+    <script src="../../js/common/login.js"></script>
+
+    <script src="../../js/student/dashboard.js"></script>
+</body>
+
+</html>
+
+
+

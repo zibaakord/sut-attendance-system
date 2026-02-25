@@ -1,178 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>professor's dashboard</title>
+    <title>داشبورد استاد</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="http://localhost:3000/api/assets/favicon">
     <link rel="stylesheet" href="../../assets/css/professor/dashboard.css">
     <link rel="stylesheet" href="../../assets/css/common/mainLayout.css">
+    <link rel="stylesheet" href="../../assets/css/common/responsive-animations.css">
 </head>
 
-<body style="flex-direction: row;">
+<body>
     <header>
         <div class="logo-container">
-            <img id="logo-svg" src="../../assets/images/logos/sut-logo.png">
+            <img id="logo-svg" src="http://localhost:3000/api/assets/logo" alt="لوگوی دانشگاه">
         </div>
     </header>
-    <div class="dashboard">
-        <header class="dashboard-header">
-            داشبورد
-        </header>
-        <ul>
-            <li>پروفایل شخصی</li>
-            <li>تقویم</li>
-            <li>درس ها و دوره ها</li>
-            <li>راهنما</li>
-        </ul>
-    </div>
-    <div>
-        <div class="main">
+
+    <div class="layout-container">
+        <aside class="dashboard" id="sidebar">
+            <h2 class="dashboard-header">داشبورد استاد</h2>
+            <ul>
+                <li class="active">نمای کلی</li>
+                <li>برنامه هفتگی</li>
+                <li>جلسات</li>
+                <li>گزارش‌ها</li>
+            </ul>
+        </aside>
+
+        <main class="main">
             <div class="master-page">
                 <div class="title-line">
-                    <div id="help">
-                    </div>
-                    <p>پنل کاربری</p>
+                    <button id="menu-toggle" class="menu-toggle" aria-label="باز کردن منو">منو</button>
+                    <p>پنل کاربری استاد</p>
                 </div>
             </div>
-            <div class="content" style="flex-direction: row;">
-                <div id="time">
-                    <table class="weekly-program">
-                    <tbody>
-                        <tr class="program-head">
-                            <td class="program-head">برنامه هفتگی</td>
-                            <td class="program-head">8-10</td>
-                            <td class="program-head">10-12</td>
-                            <td class="program-head">12-14</td>
-                            <td class="program-head">14-16</td>
-                            <td class="program-head">16-18</td>
-                            <td class="program-head">18-20</td>
-                        </tr>
-                        <tr class="even">
-                            <td class="even">شنبه</td>
-                            <td class="even">جلسات با دانشجویان تحصیلات تکمیلی</td>
-                            <td class="even">پردازش زبانهای طبیعی
-                                کلاس 2</td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                        </tr>
-                        <tr class="odd">
-                            <td class="odd">یک‌شنبه</td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                        </tr>
-                        <tr class="even">
-                            <td class="even">دوشنبه</td>
-                            <td class="even">مراجعات دانشجویی با هماهنگی قبلی</td>
-                            <td class="even">پردازش زبانهای طبیعی ف
-                                کلاس 2</td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                            <td class="even">سمینار2</td>
-                            <td class="even"></td>
-                        </tr>
-                        <tr class="odd">
-                            <td class="odd">سه‌شنبه</td>
-                            <td class="odd">هوش مصنوعی
-                                کلاس 6</td>
-                            <td class="odd">نظریه زبانها و ماشین- کلاس 4</td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                        </tr>
-                        <tr class="even">
-                            <td class="even">چهارشنبه</td>
-                            <td class="even"></td>
-                            <td class="even">نظریه زبانها ف
-                                هوش مصنوعی ز</td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                            <td class="even"></td>
-                        </tr>
-                        <tr class="odd">
-                            <td class="odd">پنج‌شنبه</td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                            <td class="odd"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="calendar" id="calendar">
-                    <caption class="calander-caption">
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th class="calander-head">شنبه</th>
-                            <th class="calander-head">یکشنبه</th>
-                            <th class="calander-head">دوشنبه</th>
-                            <th class="calander-head">سه شنبه</th>
-                            <th class="calander-head">چهارشنبه</th>
-                            <th class="calander-head">پنجشنبه</th>
-                            <th class="Fr">جمعه</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="null"></td>
-                            <td class="null"></td>
-                            <td class="month-days"> ۱ <br></td>
-                            <td class="month-days"> ۲ <br></td>
-                            <td class="month-days"> ۳ <br></td>
-                            <td class="month-days"> ۴ <br></td>
-                            <td class="Ho"> ۵ <br></td>
-                        </tr>
-                        <tr>
-                            <td class="month-days"> ۶ <br></td>
-                            <td class="month-days"> ۷ <br></td>
-                            <td class="month-days"> ۸ <br></td>
-                            <td class="month-days"> ۹ <br></td>
-                            <td class="month-days"> ۱۰ <br></td>
-                            <td class="month-days"> ۱۱ <br></td>
-                            <td class="Ho"> ۱۲ <br></td>
-                        </tr>
-                        <tr>
-                            <td class="Ho"> ۱۳ <br></td>
-                            <td class="month-days"> ۱۴ <br></td>
-                            <td class="month-days"> ۱۵ <br></td>
-                            <td class="month-days"> ۱۶ <br></td>
-                            <td class="month-days"> ۱۷ <br></td>
-                            <td class="month-days"> ۱۸ <br></td>
-                            <td class="Ho"> ۱۹ <br></td>
-                        </tr>
-                        <tr>
-                            <td class="month-days"> ۲۰ <br></td>
-                            <td class="month-days"> ۲۱ <br></td>
-                            <td class="month-days"> ۲۲ <br></td>
-                            <td class="Ho"> ۲۳ <br></td>
-                            <td class="month-days"> ۲۴ <br></td>
-                            <td class="month-days"> ۲۵ <br></td>
-                            <td class="Ho"> ۲۶ <br></td>
-                        </tr>
-                        <tr>
-                            <td class="Ho"> ۲۷ <br></td>
-                            <td class="month-days"> ۲۸ <br></td>
-                            <td class="month-days"> ۲۹ <br></td>
-                            <td class="month-days"> ۳۰ <br></td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <section class="content professor-content">
+                <div class="summary-grid">
+                    <article class="summary-card">
+                        <h3>کل جلسات</h3>
+                        <p id="total-sessions">0</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>دروس فعال</h3>
+                        <p id="active-courses">0</p>
+                    </article>
+                    <article class="summary-card">
+                        <h3>جلسات این هفته</h3>
+                        <p id="week-sessions">0</p>
+                    </article>
                 </div>
-        </div>
-        <footer>
-            <p>ساخته شده با ♡<br></p>
-            <a href="https://github.com/zibaakord">گیت‌هاب</a>
-        </footer>
+
+                <div class="report-grid">
+                    <article class="report-card">
+                        <h4>توزیع جلسات بر اساس روز</h4>
+                        <div id="day-bars" class="day-bars"></div>
+                    </article>
+
+                    <article class="report-card">
+                        <h4>آمار دروس</h4>
+                        <table class="stats-table" id="course-stats-table">
+                            <thead>
+                                <tr>
+                                    <th>درس</th>
+                                    <th>تعداد جلسه</th>
+                                    <th>آخرین تاریخ</th>
+                                </tr>
+                            </thead>
+                            <tbody id="course-stats-body">
+                                <tr><td colspan="3">در حال بارگذاری...</td></tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+
+                <div id="time" class="weekly-wrap">
+                    <h4>برنامه هفتگی استاد</h4>
+                    <table class="weekly-program" id="weekly-program">
+                        <colgroup>
+                            <col class="day-col">
+                            <col class="time-col">
+                            <col class="time-col">
+                            <col class="time-col">
+                            <col class="time-col">
+                            <col class="time-col">
+                            <col class="time-col">
+                        </colgroup>
+                        <tbody>
+                            <tr class="program-head">
+                                <td class="program-head">روز / ساعت</td>
+                                <td class="program-head">08-10</td>
+                                <td class="program-head">10-12</td>
+                                <td class="program-head">12-14</td>
+                                <td class="program-head">14-16</td>
+                                <td class="program-head">16-18</td>
+                                <td class="program-head">18-20</td>
+                            </tr>
+                            <tr class="even" data-day="شنبه">
+                                <td class="even">شنبه</td>
+                                <td class="even" data-slot="1"></td>
+                                <td class="even" data-slot="2"></td>
+                                <td class="even" data-slot="3"></td>
+                                <td class="even" data-slot="4"></td>
+                                <td class="even" data-slot="5"></td>
+                                <td class="even" data-slot="6"></td>
+                            </tr>
+                            <tr class="odd" data-day="یک‌شنبه">
+                                <td class="odd">یک‌شنبه</td>
+                                <td class="odd" data-slot="1"></td>
+                                <td class="odd" data-slot="2"></td>
+                                <td class="odd" data-slot="3"></td>
+                                <td class="odd" data-slot="4"></td>
+                                <td class="odd" data-slot="5"></td>
+                                <td class="odd" data-slot="6"></td>
+                            </tr>
+                            <tr class="even" data-day="دوشنبه">
+                                <td class="even">دوشنبه</td>
+                                <td class="even" data-slot="1"></td>
+                                <td class="even" data-slot="2"></td>
+                                <td class="even" data-slot="3"></td>
+                                <td class="even" data-slot="4"></td>
+                                <td class="even" data-slot="5"></td>
+                                <td class="even" data-slot="6"></td>
+                            </tr>
+                            <tr class="odd" data-day="سه‌شنبه">
+                                <td class="odd">سه‌شنبه</td>
+                                <td class="odd" data-slot="1"></td>
+                                <td class="odd" data-slot="2"></td>
+                                <td class="odd" data-slot="3"></td>
+                                <td class="odd" data-slot="4"></td>
+                                <td class="odd" data-slot="5"></td>
+                                <td class="odd" data-slot="6"></td>
+                            </tr>
+                            <tr class="even" data-day="چهارشنبه">
+                                <td class="even">چهارشنبه</td>
+                                <td class="even" data-slot="1"></td>
+                                <td class="even" data-slot="2"></td>
+                                <td class="even" data-slot="3"></td>
+                                <td class="even" data-slot="4"></td>
+                                <td class="even" data-slot="5"></td>
+                                <td class="even" data-slot="6"></td>
+                            </tr>
+                            <tr class="odd" data-day="پنج‌شنبه">
+                                <td class="odd">پنج‌شنبه</td>
+                                <td class="odd" data-slot="1"></td>
+                                <td class="odd" data-slot="2"></td>
+                                <td class="odd" data-slot="3"></td>
+                                <td class="odd" data-slot="4"></td>
+                                <td class="odd" data-slot="5"></td>
+                                <td class="odd" data-slot="6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>ساخته شده با ♡</p>
+        <a href="https://github.com/zibaakord">گیت‌هاب</a>
+    </footer>
+
+    <script src="../../js/professor/dashboard.js"></script>
 </body>
 
 </html>
+
+
+

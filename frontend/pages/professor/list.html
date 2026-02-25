@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست جلسات</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="http://localhost:3000/api/assets/favicon">
+    <link rel="stylesheet" href="../../assets/css/common/mainLayout.css">
+    <link rel="stylesheet" href="../../assets/css/professor/list.css">
+    <link rel="stylesheet" href="../../assets/css/common/responsive-animations.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img id="logo-svg" src="http://localhost:3000/api/assets/logo" alt="لوگوی دانشگاه">
+        </div>
+    </header>
+
+    <main class="master-page list-page">
+        <div class="title-line" style="align-items: center;">
+            <p id="page-title">لیست جلسات</p>
+        </div>
+        <div class="content list-content">
+            <p id="session-info" class="list-info"></p>
+            <div class="list-actions">
+                <button id="save-all-attendance" type="button">ذخیره همه تغییرات</button>
+            </div>
+            <div id="students-wrap" class="students-wrap">
+                <table id="students-table" class="students-table">
+                    <thead>
+                        <tr>
+                            <th>شماره دانشجویی</th>
+                            <th>نام</th>
+                            <th>نام خانوادگی</th>
+                            <th>رشته</th>
+                            <th>وضعیت</th>
+                            <th>حضور/غیاب (قابل ویرایش)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-body">
+                        <tr>
+                            <td colspan="6" class="list-empty">
+                                در حال بارگذاری...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>ساخته شده با ♡<br></p>
+        <a href="https://github.com/zibaakord">گیت‌هاب</a>
+    </footer>
+
+    <script src="../../js/professor/list.js"></script>
+</body>
+
+</html>
+
+
+

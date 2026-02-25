@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main,
+.master-page,
+.content,
+.summary-card,
+.report-card,
+.students-wrap,
+.table-wrapper,
+.weekly-wrap {
+    animation: fade-up 0.45s ease both;
+}
+
+.summary-card:nth-child(2),
+.report-card:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.summary-card:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.summary-card,
+.report-card,
+.students-wrap,
+.table-wrapper {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summary-card:hover,
+.report-card:hover,
+.students-wrap:hover,
+.table-wrapper:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .layout-container {
+        padding: 12px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    .layout-container {
+        flex-wrap: wrap;
+    }
+
+    .dashboard {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .summary-grid,
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-line {
+        padding: 10px;
+        margin: 8px;
+    }
+
+    .master-page,
+    .content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    footer {
+        height: auto;
+        min-height: 72px;
+        padding: 12px 8px;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
