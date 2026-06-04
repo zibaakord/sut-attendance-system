@@ -11,7 +11,7 @@ A full-stack academic attendance management system developed for **Shahrood Univ
 
 ## Demo
 
-▶️ [Watch Demo Video](demo/demo.mp4)
+▶️ [Watch Demo Video](https://drive.google.com/file/d/1qBKl0PuLI7K3u6_6afJ6EHzMnjhpSguW/view?usp=drive_link)
 
 ---
 
